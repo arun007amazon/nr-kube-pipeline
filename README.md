@@ -31,13 +31,13 @@ Override values as mentioned in overrides.yaml file & install helm with the over
 helm install stable/jenkins --values overrides.yaml --name jenkins --namespace jenkins
 ```
 
-Jenkins UI can be accessed using the url 'http://localhost:NODEPORT'. Password will be password mentioned in overrides.yaml file.
+Jenkins UI can be accessed using the url 'http://localhost:NODEPORT'. 
 
 ## Configure Jenkins
 
-1. Jenkins >> Credentials create a credentials with Kind "Kubernetes Service Account"
+1. Jenkins >> Credentials, create credentials with Kind "Kubernetes Service Account"
 2. Manage Jenkins >> Configure Systems , test Kubernetes connection with the above credential.
-3. Now Jenkins Kubernetes Plugin is ready to USE
+3. Jenkins Kubernetes Plugin is ready to USE
 
 ## Deploy app
 
