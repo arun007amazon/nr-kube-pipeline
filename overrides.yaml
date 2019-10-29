@@ -1,0 +1,23 @@
+master:
+  adminPassword: admin
+  resources:
+    requests:
+      cpu: "500m"
+      memory: "1024Mi"
+    limits:
+      cpu: "2000m"
+      memory: "4096Mi"
+  serviceType: NodePort
+  # Used to create Ingress record (should used with ServiceType: ClusterIP)
+  nodePort: 32323
+agent:
+  resources:
+    requests:
+      cpu: "500m"
+      memory: "1024Mi"
+    limits:
+      cpu: "500m"
+      memory: "1024Mi"
+persistence:
+  enabled: true
+  storageClass: "local"
